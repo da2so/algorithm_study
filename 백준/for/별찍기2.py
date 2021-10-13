@@ -1,0 +1,8 @@
+
+N = int(input())
+
+assert 1 <= N <= 100
+
+for i in range(1,N+1):
+    i_result = ('*'*i).rjust(N)
+    print(i_result)
