@@ -8,13 +8,11 @@ class ListNode:
 
 
 def reverseList(l1: ListNode) -> ListNode:
-
     def reverse(node: ListNode, prev: ListNode = None):
         if not node:
             return prev
 
         next, node.next = node.next, prev
-
         return reverse(next, node)
 
     return reverse(l1)
