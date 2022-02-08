@@ -12,7 +12,7 @@ class MyQueue:
         self.peek()
         return self.output.pop()
 
-    def peek(self):
+    def peek(self): #리스트 순서 재배열
         if not self.output:
             while self.input:
                 self.output.append(self.input.pop())

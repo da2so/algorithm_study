@@ -1,6 +1,7 @@
 
 import collections
 #use deque (fast)
+from typing import Deque
 
 def isPalindrome(s: str) -> bool:
     strs: Deque = collections.deque()
@@ -16,16 +17,15 @@ def isPalindrome(s: str) -> bool:
     return True
 
 
+
 # slicinng (more faseter)
 import re
 def isPalindrome(s: str) -> bool:
     s = s.lower()
-
     s = re.sub('[^a-z0-9]','',s)
-    print(s)
-    print(type(s))
 
     return s == s[::-1]
+
 a = 'A man, a plan, a canal: Panama'
 
 print(isPalindrome(a))

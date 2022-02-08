@@ -7,7 +7,7 @@ class Mystack:
 
     def push(self, num: int):
         self.q.append(num)
-
+        print(self.q)
         for _ in range(len(self.q) -1):
             self.q.append(self.q.popleft())
     def pop(self):
@@ -21,6 +21,9 @@ class Mystack:
 
 stack = Mystack()
 print(stack.push(2))
+print(stack.push(3))
+print(stack.push(1))
+
 print(stack.top())
 print(stack.pop())
 print(stack.empty())

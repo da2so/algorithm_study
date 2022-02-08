@@ -13,7 +13,7 @@ def mergeKLists(lists: List[ListNode]) -> ListNode:
 
     for i in range(len(lists)):
         if lists[i]:
-            heapq.heappush(heap, (lists[i].val, lists[i]))
+            heapq.heappush(heap, (lists[i].val, lists[i])) #lists[i].val순으로 오름차순 정렬
 
     while heap:
         node = heapq.heappop(heap)
@@ -28,6 +28,7 @@ def mergeKLists(lists: List[ListNode]) -> ListNode:
 a1 = ListNode(1)
 a2 = ListNode(4)
 a3 = ListNode(5)
+
 b1 = ListNode(1)
 b2 = ListNode(3)
 b3 = ListNode(4)
